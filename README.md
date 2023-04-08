@@ -44,7 +44,7 @@ Ways of operating on DNFs, while keeping them as DNFs
 > ![(A & B) | (A & C & D)]
 > == (!A | !B) & (!A | !C | !D) ;; Demorgans
 > ==    .   .   .
-> == (!A & !A) | (!A & !C)| (!A & !D) | (!B & !A) | (!B & !C)| (!B & !D)
+> == (!A & !A) | (!A & !C)| (!A & !D) | (!B & !A) | (!B & !C) | (!B & !D)
 > Resulting DNF
 > (!A & !A) | (!A & !C)| (!A & !D) | (!B & !A) | (!B & !C)| (!B & !D)
 > ```

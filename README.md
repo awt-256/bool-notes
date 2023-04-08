@@ -64,9 +64,10 @@ Rules of DNF simplification:
 > Fact: every DNF is a series of CNF's bounded by `OR`s
 0. `(0 & ...X) | ...Y` => `...Y`
 1. `(1 & ...X) | ...Y` => `(...X) | ...Y`
-2. `(...X) | (...X) | ...Y` => `(...X) | ...Y`
 3. `(A & ...X & !A) | ...Y` => `...Y`
-4. `(A & ...X) | (!A & ...X) | ...Y` => `(...X) | ...Y`
+4. `(A & ...X & A) | ...Y` => `(A & ...X) | ...Y`
+5. `(...X) | (...X) | ...Y` => `(...X) | ...Y`
+6. `(A & ...X) | (!A & ...X) | ...Y` => `(...X) | ...Y`
 
 <!--
 ## Suggested "Hollow DNF" (hDNF) form

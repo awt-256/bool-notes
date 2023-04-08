@@ -88,14 +88,5 @@ Ways of operating on hDNFs, while keeping them as hDNFs
 >   {(A & B & E & F), A, G, K}
 > ```
 4. `!DNF1` => de morgans then foil (CNF to DNF)
-> ```
-> DNF1 = (A & B) | (A & C & D)
-> ![(A & B) | (A & C & D)]
-> == (!A | !B) & (!A | !C | !D) ;; Demorgans
-> ==    .   .   .
-> == (!A & !A) | (!A & !C)| (!A & !D) | (!B & !A) | (!B & !C) | (!B & !D)
-> Resulting DNF
-> (!A & !A) | (!A & !C)| (!A & !D) | (!B & !A) | (!B & !C)| (!B & !D)
-> ```
-
+> (THIS DOESN'T WORK, hDNF concept might not be possible)
 -->

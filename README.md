@@ -56,12 +56,22 @@ Ways of operating on DNFs, while keeping them as DNFs
 > (!A & !A) | (!A & !C)| (!A & !D) | (!B & !A) | (!B & !C)| (!B & !D)
 > ```
 
-
 `&` and `!` take polynomial time, while `|` takes O(1)
 
-To get all possible solutions, this may be the fastest we can get. Sometimes not every solution is required
+## DNF simplification
+
+Rules of DNF simplification:
+> Fact: every DNF is a series of CNF's bounded by `OR`s
+0. `(0 & ...X) | ...Y` => `...Y`
+1. `(1 & ...X) | ...Y` => `(...X) | ...Y`
+2. `(...X) | (...X) | ...Y` => `(...X) | ...Y`
+3. `(A & ...X & !A) | ...Y` => `...Y`
+4. `(A & ...X) | (!A & ...X) | ...Y` => `(...X) | ...Y`
+
 <!--
 ## Suggested "Hollow DNF" (hDNF) form
+
+To get all possible solutions, DNF may be the fastest option. Sometimes not every solution is required
 
 Instead of storing all the conjuctions (bound together by disjunctions) in DNF form, another approach may be to only store the first value of each conjuction, along with all the elements of the first conjuction. With only this information stored, every solution to a boolean equation will not be calculatable, although it will be a lot easier to find one sole solution.
 

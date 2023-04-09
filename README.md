@@ -63,14 +63,14 @@ Ways of operating on DNFs, while keeping them as DNFs
 Rules of DNF simplification:
 > Fact: every DNF is a series of CNF's bounded by `OR`s
 
-1. _Subclause simplification_
-i. `(0 & ...X)` => `0`
-ii. `(1 & ...X)` => `(...X)`
-iii. `(A & !A & ...X)` => `0`
-iv. `(A & A & ...X)` => `(...X)`
-2. _Global simplification_
-i. `(...X) | (...X) | ...Y` => `X | ...Y`
-ii. `(A & ...X) | (!A & ...X) | ...Y` => `(...X) | ...Y`
+- _Subclause simplification_
+  1. `(0 & ...X)` => `0`
+  2. `(1 & ...X)` => `(...X)`
+  3. `(A & !A & ...X)` => `0`
+  4. `(A & A & ...X)` => `(...X)`
+- _Global simplification_
+  1. `(...X) | (...X) | ...Y` => `X | ...Y`
+  2. `(A & ...X) | (!A & ...X) | ...Y` => `(...X) | ...Y`
 
 <!--
 ## Suggested "Hollow DNF" (hDNF) form

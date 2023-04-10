@@ -39,7 +39,7 @@ Ways of operating on DNFs, while keeping them as DNFs
 > ```
 > DNF1 = (A & B) | (A & C & D)
 > DNF2 = (E & F) | (G & H & I) | K
-> [(A & B) | (A & C & D)]
+> [(A & B) | (A & C & D)] & [(E & F) | (G & H & I) | K]
 > == (A & B & [(E & F) | (G & H & I) | K]) | (A & C & D & [(E & F) | (G & H & I) | K])
 > == (A & B & E & F) | (A & B & G & H & I) | (A & B & K) | (A & C & D & E & F) | (A & C & D & G & H & I) | (A & C & D & K)
 > Resulting DNF

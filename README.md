@@ -45,17 +45,16 @@ Ways of operating on DNFs, while keeping them as DNFs
 > Resulting DNF
 > (A & B & E & F) | (A & B & G & H & I) | (A & B & K) | (A & C & D & E & F) | (A & C & D & G & H & I) | (A & C & D & K)
 > ```
-4. `!DNF1` => de morgans then foil (CNF to DNF)
+4. `!DNF1` => de morgans then apply `&`'s foil (CNF to DNF)
 > ```
 > DNF1 = (A & B) | (A & C & D)
 > ![(A & B) | (A & C & D)]
-> == (!A | !B) & (!A | !C | !D) ;; Demorgans
-> ==    .   .   .
+> == (!A | !B) & (!A | !C | !D) ;; Demorgans results in this
+>                               ;; worth noting that now this is just an `&` between two (simple) DNFs
 > == (!A & !A) | (!A & !C)| (!A & !D) | (!B & !A) | (!B & !C) | (!B & !D)
 > Resulting DNF
 > (!A & !A) | (!A & !C)| (!A & !D) | (!B & !A) | (!B & !C)| (!B & !D)
 > ```
-
 `&` and `!` take polynomial time, while `|` takes O(1)
 
 ## DNF simplification
